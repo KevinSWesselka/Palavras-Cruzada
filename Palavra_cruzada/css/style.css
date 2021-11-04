@@ -1,0 +1,51 @@
+.container {
+    margin: 2%;
+    text-align: center;
+    background-color: rgba(51, 0, 61, 0.103);
+}
+
+.caixa input {
+    width: 11px;
+    border: 0ch;
+    background-color: rgba(255, 255, 255, 0.103);
+}
+
+button {
+    background-color: green;
+    color: white;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(6, 0, 32);
+}
+
+.fundo_preto {
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 2px;
+    width: 21px;
+    height: 21px;
+}
+
+.traco {
+    background-color: rgba(56, 56, 56, 0.349);
+}
+
+.testo {
+    width: 11px;
+    text-align: center;
+}
+
+.box {
+    background-color: rgb(216, 216, 216);
+    overflow-y: scroll;
+    height: 220px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 1%;
+}
+
+.testo {
+    color: rgb(163, 0, 0);
+    background-color: rgba(51, 0, 61, 0.103);
+}
