@@ -180,8 +180,8 @@
                 <td id="q3" class="testo">3</td>
                 <!-- REGISTRADORES + RAM LETRA "R"  -->
                 <td><input id="regis_ram_r" oninput="R_regis_ram()" type="text"></td>
-                <td><input id="regis_ram_e" oninput="E_regis()" type="text"></td>
-                <td><input id="regis_ram_g" oninput="G_regis()" type="text"></td>
+                <td><input id="regis_e" oninput="E_regis()" type="text"></td>
+                <td><input id="regis_g" oninput="G_regis()" type="text"></td>
                 <!-- I5 LETRA "I" -->
                 <td><input id="regis_i5_I" oninput="I_regis_i5()" type="text"></td>
                 <td><input id="regis_S" oninput="S_regis()" type="text"></td>
@@ -719,15 +719,20 @@
 
 <script>
 
+    /* CPU */
     var c_dCpu = false 
     var p_dCpu = false
     var u_dCpu_ula = false
 
+    /* ULA */
     var l_dUla = false
     var a_dUla = false
 
+    /* I5 */
     var Vi_I_regis_i5 = false
     var v_sinco_i5 = false
+
+    /* Dual Core */ 
     var V_Dual_d = false
     var V_U_dual_quad = false
     var V_A_dual = false
@@ -736,16 +741,22 @@
     var V_dual_o = false
     var V_dual_r = false
     var V_EE_memoria_dual = false
+
+    /* Ram */
     var V_regis_ram_r = false
     var V_ram_m = false
     var V_ram_a = false
+
+    /* Flash */
     var V_flash_f = false
     var V_flash_l = false
     var V_flash_a = false
     var V_regis_flash_s = false
     var V_flash_h = false
-    var V_regis_ram_e = false 
-    var V_regis_ram_g = false
+
+    /* Registradores */
+    var V_regis_e = false 
+    var V_regis_g = false
     var V_regis_S = false
     var V_regis_t = false
     var V_regis_rr = false
@@ -1032,20 +1043,20 @@
 
     }
     function E_regis(){
-        if(regis_ram_e.value == 'e' || regis_ram_e.value == 'E'){
-            V_regis_ram_e = true
+        if(regis_e.value == 'e' || regis_e.value == 'E'){
+            V_regis_e = true
         }
         else {
-            V_regis_ram_e = false
+            V_regis_e = false
 
         } validar_registradores()
     }
     function G_regis(){
-        if(regis_ram_g.value == 'g' || regis_ram_g.value == 'G'){
-            V_regis_ram_g = true 
+        if(regis_g.value == 'g' || regis_g.value == 'G'){
+            V_regis_g = true 
         }
         else {
-            V_regis_ram_g = false
+            V_regis_g = false
         }validar_registradores()
     }
     function S_regis(){
@@ -1109,18 +1120,10 @@
 
     
     function validar_registradores(){
-         if((regis_ram_r.value == 'r' || regis_ram_r.value == 'R') && 
-         (regis_ram_e.value == 'e' || regis_ram_e.value == 'E') && (regis_ram_g.value == 'g' || regis_ram_g.value == 'G') 
-         && (regis_i5_I.value == 'i' || regis_i5_I.value == 'I') && (regis_S.value == 's' || regis_S.value == 'S') && 
-         (regis_t.value == 't' || regis_t.value == 'T') && (regis_rr.vale == 'r' || regis_rr.value == 'R') && 
-         (ula_regis_A.value == 'a' || ula_regis_A.value == 'A') && (regis_D.value == 'd' || regis_D.value == 'D') && 
-         (regis_O.value == 'o' || regis_O.value == 'O') && (regis_rrr.value == 'r' || regis_rrr.value == 'R') && 
-         (regis_eprom_E.value == 'e' || regis_eprom_E.value == 'E') && (regis_flash_s.value == 's' || regis_flash_s.value == 'S')){
-            alert(`Palavra registradores concluida`);
-            registradpres.innerHTML = `<spam style="color: green;"> registradores </spam>`
-            q3.innerHTML = `<b style="color: green;"> 3 </b>`
+        
         }
-    }
+    
+
 
 
 
