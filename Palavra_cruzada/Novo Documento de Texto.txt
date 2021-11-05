@@ -1,0 +1,19 @@
+fala kevin então..
+
+consegui fazer umas 6 palavras quase 7 se puder arrumar o registradores pq ta bugado por algun motivo
+
+até então nós temos feito e funcionando 
+
+-cpu
+-ula
+-dual core
+-i5
+-ram
+-flash
+
+e pra você que não se perder eu mandei o print da tabela feita
+
+os valores de i5 e i7 estão invertidos
+
+14-i5
+13-i7

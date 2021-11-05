@@ -60,7 +60,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">7</td>
+                <td id="q7" class="testo">7</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -139,12 +139,12 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">4</td>
+                <td id="q4" class="testo">4</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">14</td>
+                <td id="q14" class="testo">14</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -177,24 +177,24 @@
                 <td class="fundo_preto"></td>
 
                 <!-- REGISTRADORES + RAM + ULA -->
-                <td class="testo">3</td>
+                <td id="q3" class="testo">3</td>
                 <!-- REGISTRADORES + RAM LETRA "R"  -->
                 <td><input id="regis_ram_r" oninput="R_regis_ram()" type="text"></td>
-                <td><input onchange="E_regis()" type="text"></td>
-                <td><input onchange="G_regis()" type="text"></td>
+                <td><input id="regis_ram_e" oninput="E_regis()" type="text"></td>
+                <td><input id="regis_ram_g" oninput="G_regis()" type="text"></td>
                 <!-- I5 LETRA "I" -->
                 <td><input id="regis_i5_I" oninput="I_regis_i5()" type="text"></td>
-                <td><input onchange="S_regis()" type="text"></td>
-                <td><input onchange="T_regis()" type="text"></td>
-                <td><input onchange="RR_regis()" type="text"></td>
+                <td><input id="regis_S" oninput="S_regis()" type="text"></td>
+                <td><input id="regis_t" oninput="T_regis()" type="text"></td>
+                <td><input id="regis_rr" oninput="RR_regis()" type="text"></td>
                 <!-- REGISTRADORES + ULA LETRA "A"  -->
                 <td><input id="ula_regis_A" oninput="A_ula_regis()" type="text"></td>
-                <td><input onchange="D_regis()" type="text"></td>
+                <td><input id="regis_D" oninput="D_regis()" type="text"></td>
                 <!-- REGISTRADORES + ROM LETRA "O"  -->
-                <td><input onchange="O_regis_rom()" type="text"></td>
-                <td><input onchange="RRR_regis()" type="text"></td>
+                <td><input id="regis_O" oninput="O_regis_rom()" type="text"></td>
+                <td><input id="regis_rrr" oninput="RRR_regis()" type="text"></td>
                 <!-- REGISTRADORES + EPROM LETRA "E" -->
-                <td><input onchange="E_regis_eprom()" type="text"></td>
+                <td><input id="regis_eprom_E" oninput="E_regis_eprom()" type="text"></td>
                 <!-- REGISTRADORES + FLASH LETRA "S" -->
                 <td><input id="regis_flash_s" oninput="S_regis_flash()" type="text"></td>
 
@@ -219,7 +219,7 @@
                 <td class="fundo_preto"></td>
 
                 <!-- I5 NUMERO "5" -->
-                <td><input id="i5_sinco" oninput="sinco_i5()" type="text"></td>
+                <td><input id="i5_sinco" oninput="cinco_i5()" type="text"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -294,7 +294,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">13</td>
+                <td id="q13" class="testo">13</td>
 
                 <td class="testo">11</td>
 
@@ -553,7 +553,7 @@
                 <!-- ADRESS BUS LETRA "B" -->
                 <td><input onchange="B_adress()" type="text"></td>
 
-                <td class="testo">16</td>
+                <td id="q16" class="testo">16</td>
                 <!-- QUAD_CORE LETRA "Q" -->
                 <td><input onchange="Q_quad()" type="text"></td>
                 <!-- DUAL CORE + QUAD CORE LETRA "U" -->
@@ -632,7 +632,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">15</td>
+                <td id="q15" class="testo">15</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -726,6 +726,34 @@
     var l_dUla = false
     var a_dUla = false
 
+    var Vi_I_regis_i5 = false
+    var v_sinco_i5 = false
+    var V_Dual_d = false
+    var V_U_dual_quad = false
+    var V_A_dual = false
+    var V_dual_l = false
+    var V_dual_c = false
+    var V_dual_o = false
+    var V_dual_r = false
+    var V_EE_memoria_dual = false
+    var V_regis_ram_r = false
+    var V_ram_m = false
+    var V_ram_a = false
+    var V_flash_f = false
+    var V_flash_l = false
+    var V_flash_a = false
+    var V_regis_flash_s = false
+    var V_flash_h = false
+    var V_regis_ram_e = false 
+    var V_regis_ram_g = false
+    var V_regis_S = false
+    var V_regis_t = false
+    var V_regis_rr = false
+    var V_regis_D = false
+    var V_regis_O = false
+    var V_regis_rrr = false
+    var V_regis_eprom_E = false
+
     function C_cpu() {
         if (cpu_c.value == 'c' || cpu_c.value == 'C') {
            c_dCpu = true 
@@ -781,6 +809,7 @@
            a_dUla = false
         }
         validar_ula()
+        validar_registradores()
     }
 
     function validar_ula(){
@@ -793,163 +822,308 @@
     }
 
     function I_regis_i5() {
-        if (regis_i5_I.value != 'i' && regis_i5_I.value != 'I') {
-            alert(`Letra ${regis_i5_I.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${regis_i5_I.value} pela letra valida`);
+        if (regis_i5_I.value == 'i' || regis_i5_I.value == 'I') {
+            Vi_I_regis_i5 = true
         } else {
-            alert(`Letra ${regis_i5_I.value} é valida neste local.`);
+            Vi_I_regis_i5 = false
         }
+        validar_i5()
+        validar_registradores()
     }
 
-    function sinco_i5() {
-        if (i5_sinco.value != 5 && i5_sinco.value != 5) {
-            alert(`Letra/numero ${i5_sinco.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra/numero ${i5_sinco.value} pela letra valida`);
+    function cinco_i5() {
+        if (i5_sinco.value == 5 ) {
+            v_sinco_i5 = true
         } else {
-            alert(`Numero ${i5_sinco.value} é valida neste local.`);
+            v_sinco_i5 = false
         }
+        validar_i5()
+    }
 
-        if ((i5_sinco.value == 5 || i5_sinco.value == 5) && (regis_i5_I.value == 'i' || regis_i5_I.value == 'I')) {
-            alert(`Palavra I5 comcluida`);
+        function validar_i5() {
+            console.log(v_sinco_i5,Vi_I_regis_i5 )
+            if ((Vi_I_regis_i5 == true ) && (v_sinco_i5 == true)) {
+           alert(`Palavra I5 concluida`);
             palavra_i5.innerHTML = ` <spam style="color: green;"> I5 </spam>`;
             palavra_i52.innerHTML = ` <spam style="color: green;"> I5 </spam>`;
+            q14.innerHTML = `<b style="color: green;"> 14 </b>`}
+         
+        
         }
-    }
 
     function D_dual() {
-        if (dual_d.value != 'd' && dual_d.value != 'D') {
-            alert(`Letra/numero ${dual_d.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra/numero ${dual_d.value} pela letra valida`);
+        if (dual_d.value == 'd' || dual_d.value == 'D') {
+            V_Dual_d = true
         } else {
-            alert(`Letra ${dual_d.value} é valida neste local.`);
+            V_Dual_d = false
         }
+        validar_dualcore()
     }
 
     function U_dual_quad() {
-        if (dual_quad_U.value != 'u' && dual_quad_U.value != 'U') {
-            alert(`Letra ${dual_quad_U.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_quad_U.value} pela letra valida`);
+        if (dual_quad_U.value == 'u' || dual_quad_U.value == 'U') {
+            V_U_dual_quad = true
         } else {
-            alert(`Letra ${dual_quad_U.value} é valida neste local.`);
+            V_U_dual_quad = false 
         }
+        validar_dualcore()
     }
 
     function A_dual() {
-        if (dual_A.value != 'a' && dual_A.value != 'A') {
-            alert(`Letra ${dual_A.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_A.value} pela letra valida`);
+        if (dual_A.value == 'a' || dual_A.value == 'A') {
+            V_A_dual = true
         } else {
-            alert(`Letra ${dual_A.value} é valida neste local.`);
+            V_A_dual = false
         }
+        validar_dualcore()
     }
 
     function L_dual() {
-        if (dual_l.value != 'l' && dual_l.value != 'L') {
-            alert(`Letra ${dual_l.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_l.value} pela letra valida`);
+        if (dual_l.value == 'l' || dual_l.value == 'L') {
+            V_dual_l = true
         } else {
-            alert(`Letra ${dual_l.value} é valida neste local.`);
+            V_dual_l = false
         }
+        validar_dualcore()
     }
 
     function C_dual() {
-        if (dual_c.value != 'c' && dual_c.value != 'C') {
-            alert(`Letra ${dual_c.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_c.value} pela letra valida`);
+        if (dual_c.value == 'c' || dual_c.value == 'C') {
+            V_dual_c = true
         } else {
-            alert(`Letra ${dual_c.value} é valida neste local.`);
+            V_dual_c = false
         }
+        validar_dualcore()
     }
 
     function O_dual() {
-        if (dual_o.value != 'o' && dual_o.value != 'O') {
-            alert(`Letra ${dual_c.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_o.value} pela letra valida`);
+        if (dual_o.value == 'o' || dual_o.value == 'O') {
+          V_dual_o = true
         } else {
-            alert(`Letra ${dual_o.value} é valida neste local.`);
+         V_dual_o = false
         }
+        validar_dualcore()
     }
 
     function R_dual() {
-        if (dual_r.value != 'r' && dual_r.value != 'R') {
-            alert(`Letra ${dual_r.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${dual_r.value} pela letra valida`);
+        if (dual_r.value == 'r' || dual_r.value == 'R') {
+            V_dual_r = true
         } else {
-            alert(`Letra ${dual_r.value} é valida neste local.`);
+            V_dual_r = false
         }
+        validar_dualcore()
     }
 
     function EE_memoria_dual() {
-        if (memoria_dual_EE.value != 'e' && memoria_dual_EE.value != 'E') {
-            alert(`Letra ${memoria_dual_EE.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${memoria_dual_EE.value} pela letra valida`);
+        if (memoria_dual_EE.value == 'e' || memoria_dual_EE.value == 'E') {
+            V_EE_memoria_dual = true 
         } else {
-            alert(`Letra ${memoria_dual_EE.value} é valida neste local.`);
+            V_EE_memoria_dual = false
         }
+        validar_dualcore()
+    }
+    function validar_dualcore(){
+        console.log(V_Dual_d,V_U_dual_quad,V_A_dual,V_dual_l,V_dual_c,V_dual_o,V_dual_r,V_EE_memoria_dual)
+        if((dual_d.value == 'd' || dual_d.value == 'D') && (dual_quad_U.value == 'u' || dual_quad_U.value == 'U') && 
+        (dual_A.value == 'a' || dual_A.value == 'A') && (dual_l.value == 'l' || dual_l.value == 'L') && 
+        (dual_c.value == 'c' || dual_c.value == 'C') && (dual_o.value == 'o' || dual_o.value == 'O') && 
+        (dual_r.value == 'r' || dual_r.value == 'R') && (memoria_dual_EE.value == 'e' || memoria_dual_EE.value == 'E')){
+        alert(`Palavra dualcore concluida`);
+        dual_core.innerHTML = `<spam style="color: green;"> dual core </spam>`
+        q15.innerHTML = `<b style="color: green;"> 15 </b>`}
+         
     }
 
     function R_regis_ram() {
-        if (regis_ram_r.value != 'r' && regis_ram_r.value != 'R') {
-            alert(`Letra ${regis_ram_r.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${regis_ram_r.value} pela letra valida`);
+        if (regis_ram_r.value == 'r' || regis_ram_r.value == 'R') {
+            V_regis_ram_r = true
         } else {
-            alert(`Letra ${regis_ram_r.value} é valida neste local.`);
+            V_regis_ram_r = false
         }
+        validar_ram()
+        validar_registradores()
+        
+    }
+
+    function A_ram(){
+        if(ram_a.value == 'a' || ram_a.value == 'A'){
+             V_ram_a = true
+        } else{
+             V_ram_a = false
+        }
+        validar_ram()
+
     }
 
     function M_ram() {
-        if (ram_m.value != 'm' && ram_m.value != 'M') {
-            alert(`Letra ${ram_m.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${ram_m.value} pela letra valida`);
+        if (ram_m.value == 'm' || ram_m.value == 'M') {
+            V_ram_m = true
         } else {
-            alert(`Letra ${ram_m.value} é valida neste local.`);
+            V_ram_m = false
         }
+        validar_ram()
+    }
+
+    function validar_ram(){
+        console.log(V_regis_ram_r,V_ram_a,V_ram_m)
+        if((regis_ram_r.value == 'r' || regis_ram_r.value == 'R') && 
+        (ram_a.value == 'a' || ram_a.value == 'A') && (ram_m.value == 'm' || ram_m.value == 'M')){
+            alert(`Palavra ram concluida`);
+            ram.innerHTML = `<spam style="color: green;"> ram </spam>`
+            q4.innerHTML = `<b style="color: green;"> 4 </b>`}
+        
     }
 
     function F_flash() {
-        if (flash_f.value != 'f' && flash_f.value != 'F') {
-            alert(`Letra ${flash_f.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${flash_f.value} pela letra valida`);
+        if (flash_f.value == 'f' || flash_f.value == 'F') {
+            V_flash_f = true
         } else {
-            alert(`Letra ${flash_f.value} é valida neste local.`);
+            V_flash_f = false
         }
+        validar_flash()
     }
 
     function L_flash() {
-        if (flash_l.value != 'l' && flash_l.value != 'L') {
-            alert(`Letra ${flash_l.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${flash_l.value} pela letra valida`);
+        if (flash_l.value == 'l' || flash_l.value == 'L') {
+            V_flash_l = true
         } else {
-            alert(`Letra ${flash_l.value} é valida neste local.`);
+            V_flash_l = false
         }
+        validar_flash()
     }
 
     function A_flash() {
-        if (flash_a.value != 'a' && flash_a.value != 'A') {
-            alert(`Letra ${flash_a.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${flash_a.value} pela letra valida`);
+        if (flash_a.value == 'a' || flash_a.value == 'A') {
+            V_flash_a = true
         } else {
-            alert(`Letra ${flash_a.value} é valida neste local.`);
+            V_flash_a = false
         }
+        validar_flash()
     }
 
     function S_regis_flash() {
-        if (regis_flash_s.value != 's' && regis_flash_s.value != 'S') {
-            alert(`Letra ${regis_flash_s.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${regis_flash_s.value} pela letra valida`);
+        if (regis_flash_s.value == 's' || regis_flash_s.value == 'S') {
+            V_regis_flash_s = true
         } else {
-            alert(`Letra ${regis_flash_s.value} é valida neste local.`);
+            V_regis_flash_s = false
         }
+        validar_flash()
+        validar_registradores()
     }
 
     function H_flash() {
-        if (flash_h.value != 'h' && flash_h.value != 'H') {
-            alert(`Letra ${flash_h.value} é invalida neste local.`);
-            alert(`Por Favor troque a letra ${flash_h.value} pela letra valida`);
+        if (flash_h.value == 'h' || flash_h.value == 'H') {
+            V_flash_h = true
         } else {
-            alert(`Letra ${flash_h.value} é valida neste local.`);
+            V_flash_h = false
+        }
+        validar_flash()
+    }
+
+    function validar_flash(){
+         console.log(V_flash_f,V_flash_l, V_flash_a,V_regis_flash_s,V_flash_h)
+         if((flash_f.value == 'f' || flash_f.value == 'F') && (flash_l.value == 'l' || flash_l.value == 'L') &&
+         (flash_a.value == 'a' || flash_a.value == 'A') && (regis_flash_s.value == 's' || regis_flash_s.value == 'S') 
+         && (flash_h.value == 'h' || flash_h.value == 'H')) {
+            alert(`Palavra flash concluida`);
+            flash.innerHTML = `<spam style="color: green;"> flash </spam>`
+            q7.innerHTML = `<b style="color: green;"> 7 </b>`
+         }
+
+    }
+    function E_regis(){
+        if(regis_ram_e.value == 'e' || regis_ram_e.value == 'E'){
+            V_regis_ram_e = true
+        }
+        else {
+            V_regis_ram_e = false
+
+        } validar_registradores()
+    }
+    function G_regis(){
+        if(regis_ram_g.value == 'g' || regis_ram_g.value == 'G'){
+            V_regis_ram_g = true 
+        }
+        else {
+            V_regis_ram_g = false
+        }validar_registradores()
+    }
+    function S_regis(){
+        if(regis_S.value == 's' || regis_S.value == 'S'){
+            V_regis_S = true
+        }
+        else {
+            V_regis_S = false
+        }validar_registradores()
+    }
+    function T_regis(){
+        if(regis_t.value == 't' || regis_t.value == 'T'){
+            V_regis_t = true
+        }
+        else {
+            V_regis_t = false
+        }validar_registradores()
+    }  
+    function RR_regis(){
+        if(regis_rr.vale == 'r' || regis_rr.value == 'R'){
+            V_regis_rr = true
+        }
+        else {
+            V_regis_rr = false
+        }validar_registradores()
+    } 
+    function D_regis(){
+        if(regis_D.value == 'd' || regis_D.value == 'D'){
+             V_regis_D = true
+        }
+        else {
+             V_regis_D = false
+        }validar_registradores()
+    }
+    function O_regis_rom(){
+        if(regis_O.value == 'o' || regis_O.value == 'O'){
+            V_regis_O = true
+        }
+        else {
+            V_regis_O = false
+        }validar_registradores()
+    }
+    function RRR_regis(){
+        if(regis_rrr.value == 'r' || regis_rrr.value == 'R'){
+            V_regis_rrr = true
+        }
+        else{
+            V_regis_rrr = false
+        }validar_registradores()
+    
+    }
+    function E_regis_eprom(){
+        if(regis_eprom_E.value == 'e' || regis_eprom_E.value == 'E'){
+            V_regis_eprom_E = true
+        }
+        else{
+            V_regis_eprom_E = false
+        }validar_registradores()
+    }
+   
+
+    
+    function validar_registradores(){
+         if((regis_ram_r.value == 'r' || regis_ram_r.value == 'R') && 
+         (regis_ram_e.value == 'e' || regis_ram_e.value == 'E') && (regis_ram_g.value == 'g' || regis_ram_g.value == 'G') 
+         && (regis_i5_I.value == 'i' || regis_i5_I.value == 'I') && (regis_S.value == 's' || regis_S.value == 'S') && 
+         (regis_t.value == 't' || regis_t.value == 'T') && (regis_rr.vale == 'r' || regis_rr.value == 'R') && 
+         (ula_regis_A.value == 'a' || ula_regis_A.value == 'A') && (regis_D.value == 'd' || regis_D.value == 'D') && 
+         (regis_O.value == 'o' || regis_O.value == 'O') && (regis_rrr.value == 'r' || regis_rrr.value == 'R') && 
+         (regis_eprom_E.value == 'e' || regis_eprom_E.value == 'E') && (regis_flash_s.value == 's' || regis_flash_s.value == 'S')){
+            alert(`Palavra registradores concluida`);
+            registradpres.innerHTML = `<spam style="color: green;"> registradores </spam>`
+            q3.innerHTML = `<b style="color: green;"> 3 </b>`
         }
     }
+
+
+
 
     function sel_box() {
         div_frase.innerHTML = ` ${box.value}`;
