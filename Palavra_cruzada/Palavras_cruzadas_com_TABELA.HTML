@@ -118,7 +118,7 @@
 
                 <td class="fundo_preto"></td>
 
-                <td class="testo">5</td>
+                <td id="q5" class="testo">5</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -155,11 +155,11 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ROM LETRA "R" -->
-                <td><input onchange="R_rom()" type="text"></td>
+                <td><input id="Rom_R" oninput="RRom()" type="text"></td>
 
                 <td class="fundo_preto"></td>
 
-                <td class="testo">6</td>
+                <td id="q6" class="testo">6</td>
 
 
                 <!-- FLASH LETRA "A" -->
@@ -228,12 +228,12 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ROM LETRA "M" -->
-                <td><input onchange="M_rom()" type="text"></td>
+                <td><input id="Rom_M" oninput="MROM()" type="text"></td>
 
                 <td class="fundo_preto"></td>
 
                 <!-- EPROM LETRA "P" -->
-                <td><input onchange="P_eprom()" type="text"></td>
+                <td><input id="eprom_P" oninput="P_eprom()" type="text"></td>
 
                 <!-- FLASH LETRA "H" -->
                 <td><input id="flash_h" oninput="H_flash()" type="text"></td>
@@ -269,7 +269,7 @@
                 <td class="fundo_preto"></td>
 
                 <!-- EPROM LETRA "R" -->
-                <td><input onchange="R_eprom()" type="text"></td>
+                <td><input id="eprom_R" oninput="R_eprom()" type="text"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -305,7 +305,7 @@
 
 
                 <!-- EPROM LETRA "O" -->
-                <td><input onchange="O_eprom()" type="text"></td>
+                <td><input id="eprom_O" oninput="O_eprom()" type="text"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -326,10 +326,10 @@
                 <!-- MEMORIA DE MASSA LETRA "M"  -->
                 <td class="testo">8</td>
                 <td><input id="memoria_m" oninput="M_memoria()" type="text"></td>
-                <td><input onchange="E_memoria()" type="text"></td>
-                <td><input onchange="MM_memoria()" type="text"></td>
-                <td><input onchange="O_memoria()" type="text"></td>
-                <td><input onchange="R_memoria()" type="text"></td>
+                <td><input id="momoria_e" oninput="E_memoria()" type="text"></td>
+                <td><input id="momoria_mm" oninput="MM_memoria()" type="text"></td>
+                <td><input id="memoria_o" oninput="O_memoria()" type="text"></td>
+                <td><input id="memoria_r" oninput="R_memoria()" type="text"></td>
                 <!-- I7 LETRA "I" -->
                 <td><input onchange="I_memoria_i7()" type="text"></td>
                 <!-- MEMORIA DE MASSA + ADRESS BUS LETRA "A" -->
@@ -342,7 +342,7 @@
 
                 <td class="traco"></td>
                 <!-- EPROM + MEMORIA DE MASSA LETRA "M" -->
-                <td><input onchange="M_eprom_memoria()" type="text"></td>
+                <td><input id="memoria_eprom_M" oninput="M_eprom_memoria()" type="text"></td>
                 <!-- MEMORIA DE MASSA LETRA "A" -->
                 <td><input onchange="AA_memoria()" type="text"></td>
                 <td><input onchange="S_memoria()" type="text"></td>
@@ -678,7 +678,7 @@
             <p/> 1- A <b id="cpu_palavra" style="color: rgb(226, 0, 0);">_ _ _ _</b> é simplesmente o item mais relevante de hardware que existe em seu computador. Isso porque, é justamente ela que tem como papel crucial realizar tarefas e ainda calcular
             uma série de atividades.
             <p/> 2- Tipicamente, uma memoria <b id="ula_palavra" style="color: rgb(226, 0, 0);">_ _ _ _</b> recebe dois operandos como entrada, e uma entrada auxiliar des controle, que permite especificar qual operação deverá ser realizada.
-            <p/> 3- Os <b id="registradpres" style="color: rgb(226, 0, 0);">_ _ _ _ _ _</b> estão no topo da hierarquia de memória, sendo assim, é um tipo de memória mais rápida e financeiramente mais custosa.
+            <p/> 3- Os <b id="P_registradores" style="color: rgb(226, 0, 0);">_ _ _ _ _ _</b> estão no topo da hierarquia de memória, sendo assim, é um tipo de memória mais rápida e financeiramente mais custosa.
             <p/> 4- Máquinas estão sempre carregando coisas para trabalhar, como aplicativos e dados. e deixando-os de lado para serem usados mais tarde. A <b id="ram" style="color: rgb(226, 0, 0);">_ _ _ _</b> é a memória de curto prazo de um computador.
             <p/> 5- O <b id="rom" style="color: rgb(226, 0, 0);">_ _ _ _</b> significa que essas mídias foram gravadas e não podem mais ser alteradas. Isto é, que o conteúdo delas apenas está disponível para leitura.
             <p/> 6- A <b id="eprom" style="color: rgb(226, 0, 0);">_ _ _ _</b> caracteriza-se por conseguir ser apagada. Para isso, no entanto, é necessário<br/> expô-la a uma forte luz ultravioleta.
@@ -761,9 +761,26 @@
     var V_regis_t = false
     var V_regis_rr = false
     var V_regis_D = false
-    var V_regis_O = false
+    var V_regis_rom_O = false
     var V_regis_rrr = false
     var V_regis_eprom_E = false
+
+    /* Rom */
+    var V_Rom_R = false
+    var V_Rom_M = false
+    
+    /* Eprom */
+    var V_P_eprom = false
+    var V_R_eprom = false
+    var V_O_eprom = false
+    var V_M_eprom_memoria = false
+
+    /* Memoria de Massa */
+    var V_M_memoria = false
+    var V_E_memoria = false
+    var V_MM_memoria = false
+    var V_O_memoria = false
+    var V_R_memoria = false
 
     function C_cpu() {
         if (cpu_c.value == 'c' || cpu_c.value == 'C') {
@@ -826,7 +843,7 @@
     function validar_ula(){
         console.log(u_dCpu_ula,l_dUla,a_dUla)
         if (( u_dCpu_ula == true ) && (l_dUla == true ) && ( a_dUla == true )) {
-            alert(`Palavra ULA comcluida`);
+            alert(`Palavra ULA concluida`);
             ula_palavra.innerHTML = ` <spam style="color: green;"> ULA </spam>`;
             q2.innerHTML = `<b style="color: green;"> 2 </b>`;
         }
@@ -842,7 +859,7 @@
         validar_registradores()
     }
 
-    function cinco_i5() {
+     function cinco_i5() {
         if (i5_sinco.value == 5 ) {
             v_sinco_i5 = true
         } else {
@@ -1076,7 +1093,7 @@
         }validar_registradores()
     }  
     function RR_regis(){
-        if(regis_rr.vale == 'r' || regis_rr.value == 'R'){
+        if(regis_rr.value == 'r' || regis_rr.value == 'R'){
             V_regis_rr = true
         }
         else {
@@ -1093,11 +1110,13 @@
     }
     function O_regis_rom(){
         if(regis_O.value == 'o' || regis_O.value == 'O'){
-            V_regis_O = true
+            V_regis_rom_O = true
         }
         else {
-            V_regis_O = false
+            V_regis_rom_O = false
         }validar_registradores()
+         validar_ROM()
+
     }
     function RRR_regis(){
         if(regis_rrr.value == 'r' || regis_rrr.value == 'R'){
@@ -1115,20 +1134,163 @@
         else{
             V_regis_eprom_E = false
         }validar_registradores()
+        validar_eprom()
     }
-   
 
     
-    function validar_registradores(){
+
+          function validar_registradores(){
+         console.log (V_regis_ram_r,V_regis_e,V_regis_g,Vi_I_regis_i5
+         ,V_regis_S,V_regis_t,V_regis_rr,a_dUla,V_regis_D,V_regis_rom_O
+         ,V_regis_rrr,V_regis_eprom_E,V_regis_flash_s)
+
+         if(( V_regis_ram_r == true) && (V_regis_e == true) && 
+         (V_regis_g == true) &&  (Vi_I_regis_i5 == true) &&  (V_regis_S == true) &&
+         ( V_regis_t == true) && (V_regis_rr == true)  && (a_dUla == true ) && 
+          (V_regis_D == true) && (V_regis_rom_O == true) &&  (V_regis_rrr == true) &&
+         (V_regis_eprom_E == true) && (V_regis_flash_s == true)){
+             
+            alert(`Palavra Registradores concluida`);
+            P_registradores.innerHTML = `<spam style="color: green;"> Registradores </spam>`
+            q3.innerHTML = `<b style="color: green;"> 3 </b>`}
+        }   
+
+            function RRom(){
+            if (Rom_R.value == 'R' || Rom_R.value == 'r'){
+                V_Rom_R = true
+               }
+            else{
+                V_Rom_R = false }
+             validar_ROM()
+            }
+
+           function MROM(){
+            if (Rom_M.value == 'm' || Rom_M.value == 'M'){
+                V_Rom_M = true
+            }
+            else{
+                V_Rom_M = false
+            }
+            validar_ROM()
+            }
+            
         
+
+         
+          function validar_ROM(){
+          
+            console.log( V_Rom_R,V_regis_rom_O,V_Rom_M )
+      
+            if(( V_Rom_R == true) && (V_regis_rom_O == true) && (V_Rom_M == true)){
+            alert(`Palavra Rom concluida`);
+            rom.innerHTML = `<spam style="color: green;"> Rom </spam>`
+            q5.innerHTML = `<b style="color: green;"> 5 </b>`}
         }
+
+        function P_eprom(){
+            if(eprom_P.value == 'p' || eprom_P.value == 'P'){
+                V_P_eprom = true
+            }
+            else{
+                V_P_eprom= false
+            }
+            validar_eprom()
+        }
+
+        function R_eprom(){
+            if(eprom_R.value == 'r' || eprom_R.value == 'R'){
+                V_R_eprom = true
+            }
+            else{
+                V_R_eprom = false
+            }
+            validar_eprom()
+        }
+
+        function O_eprom(){
+            if(eprom_O.value == 'o' || eprom_O.value == 'O'){
+                V_O_eprom = true
+            }
+            else{
+                V_O_eprom = false
+            }
+            validar_eprom()
+        }
+        
+        function M_eprom_memoria(){
+            if(memoria_eprom_M.value == 'm' || memoria_eprom_M.value == 'M'){
+                V_M_eprom_memoria = true
+            }
+            else{
+                V_M_eprom_memoria = false
+            }
+            validar_eprom()
+        }
+
+        function validar_eprom() {
+            console.log(V_regis_eprom_E,V_P_eprom,V_R_eprom,V_O_eprom, V_M_eprom_memoria)
+            if((V_regis_eprom_E == true) && (V_P_eprom == true) && (V_R_eprom == true) 
+            && (V_O_eprom == true) && (V_M_eprom_memoria == true)){
+               
+              alert(`Palavra Eprom concluida`);
+              eprom.innerHTML = `<spam style="color: green;"> Eprom </spam>`
+              q6.innerHTML = `<b style="color: green;"> 6 </b>`
+
+            }
+        }
+         
+
+        function M_memoria(){
+             if(memoria_m.value == 'm' || memoria_m.value == 'M'){
+                V_M_memoria = true 
+             }
+             else{
+                V_M_memoria = false
+             }
+        }
+
+        function E_memoria(){
+            if(momoria_e.value == 'e' || momoria_e == 'E'){
+                V_E_memoria = true
+            }
+            else{
+                V_E_memoria = false
+            }
+        }
+
+        function MM_memoria(){
+            if(momoria_mm.value == 'm' || momoria_mm == 'M'){
+                V_MM_memoria = true
+            }
+            else{
+                V_MM_memoria = false
+            }
+        }
+
+        function O_memoria(){
+            if(memoria_o.value == 'o' || memoria_o.value == 'O'){
+                V_O_memoria = true
+            }
+            else{
+                V_O_memoria = false
+            }
+        }
+        function R_memoria(){
+            if(memoria_r.value == 'r' || memoria_r.value == 'R'){
+                V_R_memoria = true
+            }
+            else{
+                V_R_memoria = false
+            }
+        }
+
+        
+        
+        
+
     
-
-
-
-
-
-    function sel_box() {
+   
+   function sel_box() {
         div_frase.innerHTML = ` ${box.value}`;
     }
 
