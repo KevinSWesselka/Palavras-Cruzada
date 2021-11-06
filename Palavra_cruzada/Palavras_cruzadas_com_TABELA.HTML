@@ -331,7 +331,7 @@
                 <td><input id="memoria_o" oninput="O_memoria()" type="text"></td>
                 <td><input id="memoria_r" oninput="R_memoria()" type="text"></td>
                 <!-- I7 LETRA "I" -->
-                <td><input onchange="I_memoria_i7()" type="text"></td>
+                <td><input id="memoria_i_i7" onchange="I_memoria_i7()" type="text"></td>
                 <!-- MEMORIA DE MASSA + ADRESS BUS LETRA "A" -->
                 <td><input onchange="A_memoria_adress()" type="text"></td>
 
@@ -368,7 +368,7 @@
                 <td class="fundo_preto"></td>
 
                 <!-- I7 NUMERO "7" -->
-                <td><input onchange="sete_i7()" type="text"></td>
+                <td><input id="i7_sete" onchange="sete_i7()" type="text"></td>
 
                 <!-- ADRESS BUS LETRA "D" -->
                 <td><input onchange="D_adress()" type="text"></td>
@@ -555,18 +555,18 @@
 
                 <td id="q16" class="testo">16</td>
                 <!-- QUAD_CORE LETRA "Q" -->
-                <td><input onchange="Q_quad()" type="text"></td>
+                <td><input id="quad_q" onchange="Q_quad()" type="text"></td>
                 <!-- DUAL CORE + QUAD CORE LETRA "U" -->
                 <td><input id="dual_quad_U" oninput="U_dual_quad()" type="text"></td>
-                <td><input onchange="A_quad()" type="text"></td>
-                <td><input onchange="D_quad()" type="text"></td>
+                <td><input id="quad_a" onchange="A_quad()" type="text"></td>
+                <td><input id="quad_d" onchange="D_quad()" type="text"></td>
 
                 <td class="traco"></td>
 
-                <td><input onchange="C_quad()" type="text"></td>
-                <td><input onchange="O_quad()" type="text"></td>
-                <td><input onchange="R_quad()" type="text"></td>
-                <td><input onchange="E_quad()" type="text"></td>
+                <td><input id="quad_c" onchange="C_quad()" type="text"></td>
+                <td><input id="quad_o" onchange="O_quad()" type="text"></td>
+                <td><input id="quad_r" onchange="R_quad()" type="text"></td>
+                <td><input id="quad_e" onchange="E_quad()" type="text"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
             </tr>
@@ -684,18 +684,17 @@
             <p/> 6- A <b id="eprom" style="color: rgb(226, 0, 0);">_ _ _ _</b> caracteriza-se por conseguir ser apagada. Para isso, no entanto, é necessário<br/> expô-la a uma forte luz ultravioleta.
             <p/> 7- A memoria <b id="flash" style="color: rgb(226, 0, 0);">_ _ _ _</b> é nada mais que um chip de memória de computador que mantém informações armazenadas sem a necessidade de uma fonte de energia.
             <p/> 8- A <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b>, tem como função armazenar grandes quantidades de informações. Os dados armazenados nas <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b> não são perdidos
-            quando desligamos o equipamento, ao contrário da memória <b id="ram" style="color: rgb(0, 37, 202);">_ _ _ _</b>. A <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b> não é acessada pela <b id="cpu" style="color: rgb(0, 37, 202);">_ _ _ _</b>            mas sim por intermédio da memória <b id="ram" style="color: rgb(0, 37, 202);">_ _ _ _</b>, cache, etc.
-            <p/> 9- O <b id="dma" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um recurso da placa mãe que capacita os periféricos a terem<br/> acesso direto à memória <b id="ram" style="color: rgb(0, 37, 202);">_ _ _ _</b>, sem sobrecarregarem a <b id="cpu"
-                style="color: rgb(0, 37, 202);">_ _ _ _</b>.
+            quando desligamos o equipamento, ao contrário da memória <b id="ram2" style="color: rgb(0, 37, 202);">_ _ _ _</b>.<br/> A <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b> não é acessada pela <b id="cpu_palavra2" style="color: rgb(0, 37, 202);">_ _ _ _</b>            mas sim por intermédio da memória <b id="ram4" style="color: rgb(0, 37, 202);">_ _ _ _</b>, cache, etc.
+            <p/> 9- O <b id="dma" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um recurso da placa mãe que capacita os periféricos a terem<br/> acesso direto à memória <b id="ram3" style="color: rgb(0, 37, 202);">_ _ _ _</b>, sem sobrecarregarem a <b id="cpu_palavra3" style="color: rgb(0, 37, 202);">_ _ _ _</b>.
             <p/> 10- O <b id="cs" style="color: rgb(226, 0, 0);">_ _ _ _</b> é o nome de uma linha de controle em eletrônica digital usada para selecionar um chip entre vários conectados ao mesmo barramento de computador, geralmente utilizando a lógica de
             três estados.
             <p/> 11- Um <b id="address_bus" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma arquitetura de barramento de computador, O endereço é armazenado na forma de números binários para permitir que o barramento de dados acesse o armazenamento de memória.
             <p/> 12- Um <b id="data_bus" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um sistema de comunicação que transfere dados entre componentes dentro de um computador ou entre computadores.
-            <p/> 13- O Intel Core <b id="palavra_i5" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009, chamado de Core <b id="palavra_i52" style="color: rgb(226, 0, 0);">_ _ _ _</b>            750. Ele possui quatro núcleos, cache L3 de 8MB e frequência de 2,66GHz.
-            <p/> 14- O Core <b id="i7" style="color: rgb(226, 0, 0);">_ _ _ _</b> 950 e o Core <b id="i7" style="color: rgb(226, 0, 0);">_ _ _ _</b> 975 Extreme Edition foram introduzidos em março de 2009 com preços semelhantes aos preços do 940 e 965 Extreme
+            <p/> 13- O Core <b id="i7" style="color: rgb(226, 0, 0);">_ _ _ _</b> 950 e o Core <b id="i72" style="color: rgb(226, 0, 0);">_ _ _ _</b> 975 Extreme Edition foram introduzidos em março de 2009 com preços semelhantes aos preços do 940 e 965 Extreme
             Edition, respectivamente, mas com melhor desempenho em cada caso. A Intel tem agendada a interrupção do 940 e 965XE para Q3 2009.
-            <p/> 15- O termo “Core” é o que podemos chamar de núcleo, ou uma unidade de processamento. Ele é capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="dual_core" style="color: rgb(226, 0, 0);">_ _ _ _</b>            representa dois núcleos.
-            <p/> 16- Um processador é <b id="quad_core" style="color: rgb(226, 0, 0);">_ _ _ _</b> capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="quad_core" style="color: rgb(226, 0, 0);">_ _ _ _</b>            representa quatro núcleos.
+            <p/> 14- O Intel Core <b id="palavra_i5" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009, chamado de Core <b id="palavra_i52" style="color: rgb(226, 0, 0);">_ _ _ _</b>750. Ele possui quatro núcleos, cache L3 de 8MB e frequência de 2,66GHz.
+            <p/> 15- O termo “Core” é o que podemos chamar de núcleo, ou uma unidade de processamento. Ele é capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="dual_core" style="color: rgb(226, 0, 0);">_ _ _ _</b>representa dois núcleos.
+            <p/> 16- Um processador é <b id="quad" style="color: rgb(226, 0, 0);">_ _ _ _</b> capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="quad2" style="color: rgb(226, 0, 0);">_ _ _ _</b> representa quatro núcleos.
         </div>
 
 
@@ -782,6 +781,22 @@
     var V_O_memoria = false
     var V_R_memoria = false
 
+
+
+    /* Quad Core */
+    var q_dquad = false
+    var a_dquad = false
+    var d_dquad = false
+    var c_dquad = false
+    var o_dquad = false
+    var r_dquad = false
+    var e_dquad = false
+
+    /* I7 */
+    var i_di7 = false
+    var sete_di7 = false
+
+    
     function C_cpu() {
         if (cpu_c.value == 'c' || cpu_c.value == 'C') {
            c_dCpu = true 
@@ -816,6 +831,8 @@
         if (( p_dCpu == true ) && (c_dCpu == true ) && (u_dCpu_ula == true )) {
             alert(`Palavra CPU comcluida`);
             cpu_palavra.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
+            cpu_palavra2.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
+            cpu_palavra3.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
             q1.innerHTML = `<b style="color: green;"> 1 </b>`;
         }
     }
@@ -895,6 +912,7 @@
             V_U_dual_quad = false 
         }
         validar_dualcore()
+        validar_quad()
     }
 
     function A_dual() {
@@ -997,7 +1015,10 @@
         if((regis_ram_r.value == 'r' || regis_ram_r.value == 'R') && 
         (ram_a.value == 'a' || ram_a.value == 'A') && (ram_m.value == 'm' || ram_m.value == 'M')){
             alert(`Palavra ram concluida`);
-            ram.innerHTML = `<spam style="color: green;"> ram </spam>`
+            ram.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            ram2.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            ram3.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            ram4.innerHTML = `<spam style="color: green;"> RAM </spam>`
             q4.innerHTML = `<b style="color: green;"> 4 </b>`}
         
     }
@@ -1284,6 +1305,121 @@
             }
         }
 
+
+
+
+
+
+
+
+
+
+
+        function A_quad(){
+            if(quad_a.value == 'a' || quad_a.value == 'A'){
+                a_dquad = true
+            }
+            else{
+                a_dquad = false
+            }validar_quad()
+        }
+
+        function D_quad(){
+            if(quad_d.value == 'd' || quad_d.value == 'D'){
+                d_dquad = true
+            }
+            else{
+                d_dquad = false
+            }validar_quad()
+        }
+
+        function Q_quad(){
+            if(quad_q.value == 'q' || quad_q.value == 'Q'){
+                q_dquad = true
+            }
+            else{
+                q_dquad = false
+            }validar_quad()
+        }
+
+        function C_quad(){
+            if(quad_c.value == 'c' || quad_c.value == 'C'){
+                c_dquad = true
+            }
+            else{
+                c_dquad = false
+            }validar_quad()
+        }
+
+        function O_quad(){
+            if(quad_o.value == 'o' || quad_o.value == 'O'){
+                o_dquad = true
+            }
+            else{
+                o_dquad = false
+            }validar_quad()
+        }
+
+        function R_quad(){
+            if(quad_r.value == 'r' || quad_r.value == 'R'){
+                r_dquad = true
+            }
+            else{
+                r_dquad = false
+            }validar_quad()
+        }
+
+        function E_quad(){
+            if(quad_e.value == 'e' || quad_e.value == 'E'){
+                e_dquad = true
+            }
+            else{
+                e_dquad = false
+            }validar_quad()
+        }
+
+        function validar_quad() {
+            console.log(q_dquad,V_U_dual_quad,a_dquad,d_dquad, c_dquad,o_dquad,r_dquad,e_dquad)
+            if((q_dquad == true) && (V_U_dual_quad == true) && (a_dquad == true) 
+            && (c_dquad == true) && (o_dquad == true) && (r_dquad == true) &&
+            (e_dquad == true) ){
+              alert(`Palavra Quad Core concluida`);
+              quad.innerHTML = `<b style="color: green;"> Quad Core </b>`;
+              quad2.innerHTML = `<b style="color: green;"> Quad Core </b>`;
+              q16.innerHTML = `<b style="color: green;"> 6 </b>`
+            }
+        }
+
+        function I_memoria_i7(){
+            if(memoria_i_i7.value == 'i' || memoria_i_i7.value == 'I'){
+                i_di7 = true
+            }
+            else{
+                i_di7 = false
+            }validar_i7()
+        }
+
+        function sete_i7() {
+            if(i7_sete.value == 7){
+                sete_di7 = true
+            }
+            else{
+                sete_di7 = false
+            }validar_i7()
+        }
+
+        function validar_i7() {
+            console.log(i_di7,sete_di7)
+            if (sete_di7 == true && sete_di7 == true) {
+              alert(`Palavra I7 concluida`);
+              i7.innerHTML = `<b style="color: green;"> i7 </b>`;
+              i72.innerHTML = `<b style="color: green;"> i7 </b>`;
+            }
+        }
+
+
+
+        
         
         
         
