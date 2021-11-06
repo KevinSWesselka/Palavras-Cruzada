@@ -577,7 +577,7 @@
                 <td class="testo">12</td>
 
                 <!-- DATA BUS LETRA "D" -->
-                <td><input onchange="D_datab()" type="text"></td>
+                <td><input id="datab_d" onchange="D_datab()" type="text"></td>
 
                 <!-- DATA BUS LETRA "A" -->
                 <td><input onchange="A_datab()" type="text"></td>
@@ -599,7 +599,6 @@
                 <td><input onchange="S_datab()" type="text"></td>
 
                 <td class="fundo_preto"></td>
-
 
                 <!-- DUAL CORE LETRA "D" -->
                 <td><input id="dual_d" oninput="D_dual()" type="text"></td>
@@ -1305,16 +1304,6 @@
             }
         }
 
-
-
-
-
-
-
-
-
-
-
         function A_quad(){
             if(quad_a.value == 'a' || quad_a.value == 'A'){
                 a_dquad = true
@@ -1417,18 +1406,15 @@
             }
         }
 
+        function D_datab() {
+            if(i7_sete.value == 7){
+                sete_di7 = true
+            }
+            else{
+                sete_di7 = false
+            }
+        }
 
-
-        
-        
-        
-        
-
-    
-   
-   function sel_box() {
-        div_frase.innerHTML = ` ${box.value}`;
-    }
 
     function verificar() {
 
