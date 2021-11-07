@@ -14,12 +14,13 @@
 <body>
 
 
-
+<div id="completar_jogo" style="display: block;">
     <div class="container">
         <h1>Palavras Cruazadas de Arqui.Comp.</h1>
         <h2>Complete o Cassa Palavras com as dicas de Arqui.Comp.</h2>
         <table class="caixa" border="3" align="center">
             <tr>
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -66,6 +67,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
+                <td class="fundo_preto"></td>
             </tr>
 
             <tr>
@@ -88,8 +90,9 @@
                 <td class="fundo_preto"></td>
 
                 <!-- FLASH LETRA "F" -->
-                <td><input id="flash_f" oninput="F_flash()" type="text"></td>
+                <td><input id="flash_f" oninput="F_flash()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -107,10 +110,10 @@
                 <td class="fundo_preto"></td>
 
                 <td id="q1" class="testo">1</td>
-                <td><input id="cpu_c" oninput="C_cpu()" type="text"></td>
-                <td><input id="cpu_p" oninput="P_cpu()" type="text"></td>
+                <td><input id="cpu_c" oninput="C_cpu()" type="text" maxlength="1"></td>
+                <td><input id="cpu_p" oninput="P_cpu()" type="text" maxlength="1"></td>
                 <!-- CPU + ULA LETRA "U" -->
-                <td><input id="cpu_ula_u" oninput="U_cpu_ula()" type="text"></td>
+                <td><input id="cpu_ula_u" oninput="U_cpu_ula()" type="text" maxlength="1"></td>
 
 
                 <td class="fundo_preto"></td>
@@ -121,8 +124,9 @@
                 <td class="fundo_preto"></td>
 
                 <!-- FLASH LETRA "L" -->
-                <td><input id="flash_l" oninput="L_flash()" type="text"></td>
+                <td><input id="flash_l" oninput="L_flash()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -146,12 +150,12 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td><input id="ula_L" oninput="L_ula()" type="text"></td>
+                <td><input id="ula_L" oninput="L_ula()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
 
                 <!-- ROM LETRA "R" -->
-                <td><input id="Rom_R" oninput="RRom()" type="text"></td>
+                <td><input id="Rom_R" oninput="RRom()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
 
@@ -159,8 +163,9 @@
 
 
                 <!-- FLASH LETRA "A" -->
-                <td><input id="flash_a" oninput="A_flash()" type="text"></td>
+                <td><input id="flash_a" oninput="A_flash()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -174,25 +179,26 @@
                 <!-- REGISTRADORES + RAM + ULA -->
                 <td id="q3" class="testo">3</td>
                 <!-- REGISTRADORES + RAM LETRA "R"  -->
-                <td><input id="regis_ram_r" oninput="R_regis_ram()" type="text"></td>
-                <td><input id="regis_e" oninput="E_regis()" type="text"></td>
-                <td><input id="regis_g" oninput="G_regis()" type="text"></td>
+                <td><input id="regis_ram_r" oninput="R_regis_ram()" type="text" maxlength="1"></td>
+                <td><input id="regis_e" oninput="E_regis()" type="text" maxlength="1"></td>
+                <td><input id="regis_g" oninput="G_regis()" type="text" maxlength="1"></td>
                 <!-- I5 LETRA "I" -->
-                <td><input id="regis_i5_I" oninput="I_regis_i5()" type="text"></td>
-                <td><input id="regis_S" oninput="S_regis()" type="text"></td>
-                <td><input id="regis_t" oninput="T_regis()" type="text"></td>
-                <td><input id="regis_rr" oninput="RR_regis()" type="text"></td>
+                <td><input id="regis_i5_I" oninput="I_regis_i5()" type="text" maxlength="1"></td>
+                <td><input id="regis_S" oninput="S_regis()" type="text" maxlength="1"></td>
+                <td><input id="regis_t" oninput="T_regis()" type="text" maxlength="1"></td>
+                <td><input id="regis_rr" oninput="RR_regis()" type="text" maxlength="1"></td>
                 <!-- REGISTRADORES + ULA LETRA "A"  -->
-                <td><input id="ula_regis_A" oninput="A_ula_regis()" type="text"></td>
-                <td><input id="regis_D" oninput="D_regis()" type="text"></td>
+                <td><input id="ula_regis_A" oninput="A_ula_regis()" type="text" maxlength="1"></td>
+                <td><input id="regis_D" oninput="D_regis()" type="text" maxlength="1"></td>
                 <!-- REGISTRADORES + ROM LETRA "O"  -->
-                <td><input id="regis_O" oninput="O_regis_rom()" type="text"></td>
-                <td><input id="regis_rrr" oninput="RRR_regis()" type="text"></td>
+                <td><input id="regis_O" oninput="O_regis_rom()" type="text" maxlength="1"></td>
+                <td><input id="regis_rrr" oninput="RRR_regis()" type="text" maxlength="1"></td>
                 <!-- REGISTRADORES + EPROM LETRA "E" -->
-                <td><input id="regis_eprom_E" oninput="E_regis_eprom()" type="text"></td>
+                <td><input id="regis_eprom_E" oninput="E_regis_eprom()" type="text" maxlength="1"></td>
                 <!-- REGISTRADORES + FLASH LETRA "S" -->
-                <td><input id="regis_flash_s" oninput="S_regis_flash()" type="text"></td>
+                <td><input id="regis_flash_s" oninput="S_regis_flash()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -206,30 +212,31 @@
                 <td class="fundo_preto"></td>
 
                 <!-- RAM -->
-                <td><input id="ram_a" oninput="A_ram()" type="text"></td>
+                <td><input id="ram_a" oninput="A_ram()" type="text" maxlength="1"></td>
 
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- I5 NUMERO "5" -->
-                <td><input id="i5_sinco" oninput="cinco_i5()" type="text"></td>
+                <td><input id="i5_sinco" oninput="cinco_i5()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- ROM LETRA "M" -->
-                <td><input id="Rom_M" oninput="MROM()" type="text"></td>
+                <td><input id="Rom_M" oninput="MROM()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
 
                 <!-- EPROM LETRA "P" -->
-                <td><input id="eprom_P" oninput="P_eprom()" type="text"></td>
+                <td><input id="eprom_P" oninput="P_eprom()" type="text" maxlength="1"></td>
 
                 <!-- FLASH LETRA "H" -->
-                <td><input id="flash_h" oninput="H_flash()" type="text"></td>
+                <td><input id="flash_h" oninput="H_flash()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -237,6 +244,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
+
             </tr>
 
             <tr>
@@ -244,12 +252,12 @@
                 <td class="fundo_preto"></td>
 
                 <!-- RAM LETRA "M"-->
-                <td><input id="ram_m" oninput="M_ram()" type="text"></td>
+                <td><input id="ram_m" oninput="M_ram()" type="text" maxlength="1"></td>
 
 
                 <td class="fundo_preto"></td>
 
-                <td class="testo">9</td>
+                <td id="q9" class="testo">9</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -261,13 +269,14 @@
                 <td class="fundo_preto"></td>
 
                 <!-- EPROM LETRA "R" -->
-                <td><input id="eprom_R" oninput="R_eprom()" type="text"></td>
+                <td><input id="eprom_R" oninput="R_eprom()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
-                <td class="testo">10</td>
+                <td id="q10" class="testo">10</td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -280,14 +289,14 @@
                 <td class="fundo_preto"></td>
 
                 <!-- DMA LETRA "D" -->
-                <td><input onchange="D_dma()" type="text"></td>
+                <td><input id="Dma_D" oninput="D_dma()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <td id="q13" class="testo">13</td>
 
-                <td class="testo">11</td>
+                <td id="q11" class="testo">11</td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -296,14 +305,15 @@
 
 
                 <!-- EPROM LETRA "O" -->
-                <td><input id="eprom_O" oninput="O_eprom()" type="text"></td>
+                <td><input id="eprom_O" oninput="O_eprom()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- CS LETRA "C" -->
-                <td><input onchange="C_cs()" type="text"></td>
+                <td><input id="Cs_C" oninput="C_cs()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -314,32 +324,33 @@
                 <td class="fundo_preto"></td>
 
                 <!-- MEMORIA DE MASSA LETRA "M"  -->
-                <td class="testo">8</td>
-                <td><input id="memoria_m" oninput="M_memoria()" type="text"></td>
-                <td><input id="momoria_e" oninput="E_memoria()" type="text"></td>
-                <td><input id="momoria_mm" oninput="MM_memoria()" type="text"></td>
-                <td><input id="memoria_o" oninput="O_memoria()" type="text"></td>
-                <td><input id="memoria_r" oninput="R_memoria()" type="text"></td>
+                <td id="q8" class="testo">8</td>
+                <td><input id="memoria_m" oninput="M_memoria()" type="text" maxlength="1"></td>
+                <td><input id="momoria_e" oninput="E_memoria()" type="text" maxlength="1"></td>
+                <td><input id="momoria_mm" oninput="MM_memoria()" type="text" maxlength="1"></td>
+                <td><input id="memoria_o" oninput="O_memoria()" type="text" maxlength="1"></td>
+                <td><input id="memoria_r" oninput="R_memoria()" type="text" maxlength="1"></td>
                 <!-- I7 LETRA "I" -->
-                <td><input id="memoria_i_i7" onchange="I_memoria_i7()" type="text"></td>
+                <td><input id="memoria_i_i7" oninput="I_memoria_i7()" type="text" maxlength="1"></td>
                 <!-- MEMORIA DE MASSA + ADRESS BUS LETRA "A" -->
-                <td><input onchange="A_memoria_adress()" type="text"></td>
+                <td><input id="memoria_adress_A" oninput="A_memoria_adress()" type="text" maxlength="1"></td>
 
                 <td class="traco"></td>
-                <td><input onchange="D_memoria()" type="text"></td>
+                <td><input id="memoria_d" oninput="D_memoria()" type="text" maxlength="1"></td>
                 <!-- MEMORIA DE MASSA + DUAL CORE LETRA "E" -->
-                <td><input id="memoria_dual_EE" oninput="EE_memoria_dual()" type="text"></td>
+                <td><input id="memoria_dual_EE" oninput="EE_memoria_dual()" type="text" maxlength="1"></td>
 
                 <td class="traco"></td>
                 <!-- EPROM + MEMORIA DE MASSA LETRA "M" -->
-                <td><input id="memoria_eprom_M" oninput="M_eprom_memoria()" type="text"></td>
+                <td><input id="memoria_eprom_M" oninput="M_eprom_memoria()" type="text" maxlength="1"></td>
                 <!-- MEMORIA DE MASSA LETRA "A" -->
-                <td><input onchange="AA_memoria()" type="text"></td>
-                <td><input onchange="S_memoria()" type="text"></td>
+                <td><input id="memoria_AA" oninput="AA_memoria()" type="text" maxlength="1"></td>
+                <td><input id="memoria_S" oninput="S_memoria()" type="text" maxlength="1"></td>
                 <!-- MEMORIA DE MASSA + CS LETRA "S" -->
-                <td><input onchange="SS_memoria_cs()" type="text"></td>
-                <td><input onchange="AAA_memoria()" type="text"></td>
+                <td><input id="memoria_CS_SS" oninput="SS_memoria_cs()" type="text" maxlength="1" ></td>
+                <td><input id="memoria_AAA" oninput="AAA_memoria()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
             </tr>
@@ -351,23 +362,24 @@
                 <td class="fundo_preto"></td>
 
                 <!-- DMA LETRA "A" -->
-                <td><input onchange="A_dma()" type="text"></td>
+                <td><input id="dma_A" oninput="A_dma()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- I7 NUMERO "7" -->
-                <td><input id="i7_sete" onchange="sete_i7()" type="text"></td>
+                <td><input id="i7_sete" oninput="sete_i7()" type="text" maxlength="1"></td>
 
                 <!-- ADRESS BUS LETRA "D" -->
-                <td><input onchange="D_adress()" type="text"></td>
+                <td><input id="adress_d" oninput="D_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- DUAL CORE LETRA "R" -->
-                <td><input id="dual_r" oninput="R_dual()" type="text"></td>
+                <td><input id="dual_r" oninput="R_dual()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -389,14 +401,15 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ADRESS BUS LETRA "R" -->
-                <td><input onchange="R_adress()" type="text"></td>
+                <td><input id="adress_r" oninput="R_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- DUAL CORE LETRA "O" -->
-                <td><input id="dual_o" oninput="O_dual()" type="text"></td>
+                <td><input id="dual_o" oninput="O_dual()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -419,14 +432,15 @@
 
 
                 <!-- ADRESS BUS LETRA "E" -->
-                <td><input onchange="E_adress()" type="text"></td>
+                <td><input id="adress_e" oninput="E_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- DUAL CORE LETRA "C" -->
-                <td><input id="dual_c" oninput="C_dual()" type="text"></td>
+                <td><input id="dual_c" oninput="C_dual()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -448,7 +462,7 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ADRESS BUS LETRA "S" -->
-                <td><input onchange="S_adress()" type="text"></td>
+                <td><input id="adress_s" oninput="S_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -463,6 +477,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
+                <td class="fundo_preto"></td>
             </tr>
             <tr>
                 <td class="fundo_preto"></td>
@@ -475,14 +490,15 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ADRESS BUS LETRA "S" -->
-                <td><input onchange="SS_adress()" type="text"></td>
+                <td><input id="adress_ss" oninput="SS_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
 
                 <!-- DUAL CORE LETRA "L" -->
-                <td><input id="dual_l" oninput="L_dual()" type="text"></td>
+                <td><input id="dual_l" oninput="L_dual()" type="text" maxlength="1"></td>
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -510,7 +526,7 @@
 
 
                 <!-- DUAL CORE LETRA "A" -->
-                <td><input id="dual_A" oninput="A_dual()" type="text"></td>
+                <td><input id="dual_A" oninput="A_dual()" type="text" maxlength="1"></td>
 
 
                 <td class="fundo_preto"></td>
@@ -521,7 +537,7 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
-
+                <td class="fundo_preto"></td>
             </tr>
 
             <tr>
@@ -535,22 +551,23 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ADRESS BUS LETRA "B" -->
-                <td><input onchange="B_adress()" type="text"></td>
+                <td><input id="adress_b" oninput="B_adress()" type="text" maxlength="1"></td>
 
                 <td id="q16" class="testo">16</td>
                 <!-- QUAD_CORE LETRA "Q" -->
-                <td><input id="quad_q" onchange="Q_quad()" type="text"></td>
+                <td><input id="quad_q" oninput="Q_quad()" type="text" maxlength="1"></td>
                 <!-- DUAL CORE + QUAD CORE LETRA "U" -->
-                <td><input id="dual_quad_U" oninput="U_dual_quad()" type="text"></td>
-                <td><input id="quad_a" onchange="A_quad()" type="text"></td>
-                <td><input id="quad_d" onchange="D_quad()" type="text"></td>
+                <td><input id="dual_quad_U" oninput="U_dual_quad()" type="text" maxlength="1"></td>
+                <td><input id="Quad_A" oninput="A_quad()" type="text" maxlength="1"></td>
+                <td><input id="quad_d" oninput="D_quad()" type="text"maxlength="1"></td>
 
                 <td class="traco"></td>
 
-                <td><input id="quad_c" onchange="C_quad()" type="text"></td>
-                <td><input id="quad_o" onchange="O_quad()" type="text"></td>
-                <td><input id="quad_r" onchange="R_quad()" type="text"></td>
-                <td><input id="quad_e" onchange="E_quad()" type="text"></td>
+                <td><input id="quad_c" oninput="C_quad()" type="text" maxlength="1"></td>
+                <td><input id="quad_o" oninput="O_quad()" type="text" maxlength="1"></td>
+                <td><input id="quad_r" oninput="R_quad()" type="text" maxlength="1"></td>
+                <td><input id="quad_e" oninput="E_quad()" type="text" maxlength="1"></td>
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
             </tr>
 
@@ -560,33 +577,35 @@
                 <td id="q12" class="testo">12</td>
 
                 <!-- DATA BUS LETRA "D" -->
-                <td><input id="datab_d" onchange="D_datab()" type="text"></td>
+                <td><input id="datab_d" oninput="D_datab()" type="text" maxlength="1"></td>
 
                 <!-- DATA BUS LETRA "A" -->
-                <td><input id="datab_a" onchange="A_datab()" type="text"></td>
+                <td><input id="datab_a" oninput="A_datab()" type="text" maxlength="1"></td>
 
                 <!-- DATA BUS LETRA "T" -->
-                <td><input id="datab_t" onchange="T_datab()" type="text"></td>
+                <td><input id="datab_t" oninput="T_datab()" type="text" maxlength="1"></td>
 
                 <!-- DATA BUS LETRA "A" -->
-                <td><input id="datab_aa" onchange="AA_datab()" type="text"></td>
+                <td><input id="datab_aa" oninput="AA_datab()" type="text" maxlength="1"></td>
 
                 <td class="traco"></td>
                 <!-- DATA BUS LETRA "B" -->
-                <td><input id="datab_b" onchange="B_datab()" type="text"></td>
+                <td><input id="datab_b" oninput="B_datab()" type="text" maxlength="1"></td>
 
                 <!-- ADRESS BUS + DATA BUS LETRA "U" -->
-                <td><input id="adress_datab_u" onchange="U_adress_datab()" type="text"></td>
+                <td><input id="adress_datab_u" oninput="U_adress_datab()" type="text" maxlength="1"></td>
 
                 <!-- DATA BUS LETRA "S" -->
-                <td><input id="datab_s" onchange="S_datab()" type="text"></td>
+                <td><input id="datab_s" oninput="S_datab()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
 
+
                 <!-- DUAL CORE LETRA "D" -->
-                <td><input id="dual_d" oninput="D_dual()" type="text"></td>
+                <td><input id="dual_d" oninput="D_dual()" type="text" maxlength="1"></td>
 
 
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -608,7 +627,7 @@
                 <td class="fundo_preto"></td>
 
                 <!-- ADRESS BUS LETRA "S" -->
-                <td><input onchange="SSS_adress()" type="text"></td>
+                <td><input id="adress_sss" oninput="SSS_adress()" type="text" maxlength="1"></td>
 
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -623,9 +642,11 @@
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
+                <td class="fundo_preto"></td>
             </tr>
 
             <tr>
+                <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
                 <td class="fundo_preto"></td>
@@ -658,22 +679,22 @@
             uma série de atividades.
             <p/> 2- Tipicamente, uma memoria <b id="ula_palavra" style="color: rgb(226, 0, 0);">_ _ _ _</b> recebe dois operandos como entrada, e uma entrada auxiliar des controle, que permite especificar qual operação deverá ser realizada.
             <p/> 3- Os <b id="P_registradores" style="color: rgb(226, 0, 0);">_ _ _ _ _ _</b> estão no topo da hierarquia de memória, sendo assim, é um tipo de memória mais rápida e financeiramente mais custosa.
-            <p/> 4- Máquinas estão sempre carregando coisas para trabalhar, como aplicativos e dados. e deixando-os de lado para serem usados mais tarde. A <b id="ram" style="color: rgb(226, 0, 0);">_ _ _ _</b> é a memória de curto prazo de um computador.
+            <p/> 4- Máquinas estão sempre carregando coisas para trabalhar, como aplicativos e dados. e deixando-os de lado para serem usados mais tarde. A <b id="P_ram" style="color: rgb(226, 0, 0);">_ _ _ _</b> é a memória de curto prazo de um computador.
             <p/> 5- O <b id="rom" style="color: rgb(226, 0, 0);">_ _ _ _</b> significa que essas mídias foram gravadas e não podem mais ser alteradas. Isto é, que o conteúdo delas apenas está disponível para leitura.
             <p/> 6- A <b id="eprom" style="color: rgb(226, 0, 0);">_ _ _ _</b> caracteriza-se por conseguir ser apagada. Para isso, no entanto, é necessário<br/> expô-la a uma forte luz ultravioleta.
             <p/> 7- A memoria <b id="flash" style="color: rgb(226, 0, 0);">_ _ _ _</b> é nada mais que um chip de memória de computador que mantém informações armazenadas sem a necessidade de uma fonte de energia.
-            <p/> 8- A <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b>, tem como função armazenar grandes quantidades de informações. Os dados armazenados nas <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b> não são perdidos
-            quando desligamos o equipamento, ao contrário da memória <b id="ram2" style="color: rgb(0, 37, 202);">_ _ _ _</b>.<br/> A <b id="memoria_de_massa" style="color: rgb(226, 0, 0);">_ _ _ _</b> não é acessada pela <b id="cpu_palavra2" style="color: rgb(0, 37, 202);">_ _ _ _</b>            mas sim por intermédio da memória <b id="ram4" style="color: rgb(0, 37, 202);">_ _ _ _</b>, cache, etc.
-            <p/> 9- O <b id="dma" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um recurso da placa mãe que capacita os periféricos a terem<br/> acesso direto à memória <b id="ram3" style="color: rgb(0, 37, 202);">_ _ _ _</b>, sem sobrecarregarem a <b id="cpu_palavra3" style="color: rgb(0, 37, 202);">_ _ _ _</b>.
+            <p/> 8- A <b id="memoria" style="color: rgb(226, 0, 0);">_ _ _ _</b>, tem como função armazenar grandes quantidades de informações. Os dados armazenados nas <b id="memoria2" style="color: rgb(226, 0, 0);">_ _ _ _</b> não são perdidos
+            quando desligamos o equipamento, ao contrário da memória <b id="P_ram2" style="color: rgb(0, 37, 202);">_ _ _ _</b>. A <b id="memoria3" style="color: rgb(226, 0, 0);">_ _ _ _</b> não é acessada pela <b id="cpu_palavra2" style="color: rgb(0, 37, 202);">_ _ _ _</b>mas sim por intermédio da memória <b id="P_ram4" style="color: rgb(0, 37, 202);">_ _ _ _</b>, cache, etc.
+            <p/> 9- O <b id="dma" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um recurso da placa mãe que capacita os periféricos a terem<br/> acesso direto à memória <b id="P_ram3" style="color: rgb(0, 37, 202);">_ _ _ _</b>, sem sobrecarregarem a <b id="cpu_palavra3" style="color: rgb(0, 37, 202);">_ _ _ _</b>.
             <p/> 10- O <b id="cs" style="color: rgb(226, 0, 0);">_ _ _ _</b> é o nome de uma linha de controle em eletrônica digital usada para selecionar um chip entre vários conectados ao mesmo barramento de computador, geralmente utilizando a lógica de
             três estados.
             <p/> 11- Um <b id="address_bus" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma arquitetura de barramento de computador, O endereço é armazenado na forma de números binários para permitir que o barramento de dados acesse o armazenamento de memória.
             <p/> 12- Um <b id="data_bus" style="color: rgb(226, 0, 0);">_ _ _ _</b> é um sistema de comunicação que transfere dados entre componentes dentro de um computador ou entre computadores.
-            <p/> 13- O Core <b id="i7" style="color: rgb(226, 0, 0);">_ _ _ _</b> 950 e o Core <b id="i7dois" style="color: rgb(226, 0, 0);">_ _ _ _</b> 975 Extreme Edition foram introduzidos em março de 2009 com preços semelhantes aos preços do 940 e 965 Extreme
+            <p/> 13- O Intel Core <b id="palavra_i5" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009, chamado de Core <b id="palavra_i52" style="color: rgb(226, 0, 0);">_ _ _ _</b>            750. Ele possui quatro núcleos, cache L3 de 8MB e frequência de 2,66GHz.
+            <p/> 14- O Core <b id="i7" style="color: rgb(226, 0, 0);">_ _ _ _</b> 950 e o Core <b id="i72" style="color: rgb(226, 0, 0);">_ _ _ _</b> 975 Extreme Edition foram introduzidos em março de 2009 com preços semelhantes aos preços do 940 e 965 Extreme
             Edition, respectivamente, mas com melhor desempenho em cada caso. A Intel tem agendada a interrupção do 940 e 965XE para Q3 2009.
-            <p/> 14- O Intel Core <b id="palavra_i5" style="color: rgb(226, 0, 0);">_ _ _ _</b> é uma das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009, chamado de Core <b id="palavra_i52" style="color: rgb(226, 0, 0);">_ _ _ _</b>750. Ele possui quatro núcleos, cache L3 de 8MB e frequência de 2,66GHz.
-            <p/> 15- O termo “Core” é o que podemos chamar de núcleo, ou uma unidade de processamento. Ele é capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="dual_core" style="color: rgb(226, 0, 0);">_ _ _ _</b>representa dois núcleos.
-            <p/> 16- Um processador é <b id="quad" style="color: rgb(226, 0, 0);">_ _ _ _</b> capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="quad2" style="color: rgb(226, 0, 0);">_ _ _ _</b> representa quatro núcleos.
+            <p/> 15- O termo “Core” é o que podemos chamar de núcleo, ou uma unidade de processamento. Ele é capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="dual_core" style="color: rgb(226, 0, 0);">_ _ _ _</b>            representa dois núcleos.
+            <p/> 16- Um processador é <b id="quad2" style="color: rgb(226, 0, 0);">_ _ _ _</b> capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações. Logo, <b id="quad" style="color: rgb(226, 0, 0);">_ _ _ _</b>            representa quatro núcleos.
         </div>
 
 
@@ -690,7 +711,36 @@
         <h1>By: Kevin Wesselka & Lucas Bazilio </h1>
 
     </div>
+</div>
+<div id="tela_de_vitoria" style="display: none;">
+  <center>
+     <img src="https://pbs.twimg.com/media/DwdnIguXQAALGqa.jpg" alt="imagem de vitoria" style="border-radius: 50px; 
+     height: 1000; width: 500;background-size: cover">
+  
+     <div id="msg"></div>
+     <div id="msg2"></div>
 
+     <br> <button onclick="voltar()" style="border-radius: 30px; color: blue;" >Jogar Novamente</button>
+  </center>
+
+  
+
+</div>
+<div id="tela_de_derrota" style="display: none;">
+    <center>
+    <img src="https://tarjapreta.news/wp-content/uploads/2019/01/faustao.jpg" alt="imagem de derrota" style="border-radius: 50px; 
+    height: 1000; width: 500;background-size: cover">
+       
+       <div id="msg3"></div>
+       <div id="msg4"></div>
+
+     <br> <button onclick="tentar_de_novo()" style="border-radius: 30px; color: blue;" >Jogar Novamente</button> <br>
+    </center>
+  
+   
+
+    
+</div>    
 </body>
 
 </html>
@@ -707,7 +757,7 @@
     var a_dUla = false
 
     /* I5 */
-    var Vi_I_regis_i5 = false
+    var V_I_regis_i5 = false
     var v_sinco_i5 = false
 
     /* Dual Core */ 
@@ -759,23 +809,27 @@
     var V_MM_memoria = false
     var V_O_memoria = false
     var V_R_memoria = false
+    var V_I_memoria_i7 = false
+    var V_A_memoria_adress = false
+    var V_D_memoria = false
+    var V_AA_memoria = false
+    var V_S_memoria = false
+    var V_SS_memoria_cs = false
+    var V_AAA_memoria = false
 
+     /* Quad Core */
+     var q_dquad = false
+     var a_dquad = false
+     var d_dquad = false
+     var c_dquad = false
+     var o_dquad = false
+     var r_dquad = false
+     var e_dquad = false
 
-
-    /* Quad Core */
-    var q_dquad = false
-    var a_dquad = false
-    var d_dquad = false
-    var c_dquad = false
-    var o_dquad = false
-    var r_dquad = false
-    var e_dquad = false
-
-    /* I7 */
-    var i_di7 = false
-    var sete_di7 = false
-
-    /* Data Bus */
+     /* I7 */
+     var sete_di7 = false
+     
+      /* Data Bus */
     var d_ddatab = false
     var a_ddatab = false
     var t_ddatab = false
@@ -784,6 +838,23 @@
     var u_dadress_datab = false
     var s_ddatab = false
     
+    /* Adress bus */ 
+    var V_adress_D = false
+    var V_adress_r = false 
+    var V_adress_e = false 
+    var V_adress_s = false
+    var V_adress_ss = false
+    var V_adress_b = false 
+    var V_adress_sss = false
+    
+    /* Cs */
+    var V_cs_C = false
+    
+    /* Dma_D */
+    var V_Dma_D = false
+    var V_Dma_A = false
+     
+
     function C_cpu() {
         if (cpu_c.value == 'c' || cpu_c.value == 'C') {
            c_dCpu = true 
@@ -816,7 +887,7 @@
     function validar_cpu(){
         console.log(c_dCpu,p_dCpu,u_dCpu_ula)
         if (( p_dCpu == true ) && (c_dCpu == true ) && (u_dCpu_ula == true )) {
-            alert(`Palavra CPU comcluida`);
+            alert(`Palavra CPU concluida`);
             cpu_palavra.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
             cpu_palavra2.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
             cpu_palavra3.innerHTML = ` <spam style="color: green;"> CPU </spam>`;
@@ -855,9 +926,9 @@
 
     function I_regis_i5() {
         if (regis_i5_I.value == 'i' || regis_i5_I.value == 'I') {
-            Vi_I_regis_i5 = true
+            V_I_regis_i5 = true
         } else {
-            Vi_I_regis_i5 = false
+            V_I_regis_i5 = false
         }
         validar_i5()
         validar_registradores()
@@ -873,8 +944,8 @@
     }
 
         function validar_i5() {
-            console.log(v_sinco_i5,Vi_I_regis_i5 )
-            if ((Vi_I_regis_i5 == true ) && (v_sinco_i5 == true)) {
+            console.log(v_sinco_i5,V_I_regis_i5 )
+            if ((V_I_regis_i5 == true ) && (v_sinco_i5 == true)) {
            alert(`Palavra I5 concluida`);
             palavra_i5.innerHTML = ` <spam style="color: green;"> I5 </spam>`;
             palavra_i52.innerHTML = ` <spam style="color: green;"> I5 </spam>`;
@@ -899,7 +970,6 @@
             V_U_dual_quad = false 
         }
         validar_dualcore()
-        validar_quad()
     }
 
     function A_dual() {
@@ -954,6 +1024,7 @@
             V_EE_memoria_dual = false
         }
         validar_dualcore()
+        validar_memoria_massa()
     }
     function validar_dualcore(){
         console.log(V_Dual_d,V_U_dual_quad,V_A_dual,V_dual_l,V_dual_c,V_dual_o,V_dual_r,V_EE_memoria_dual)
@@ -962,7 +1033,7 @@
         (dual_c.value == 'c' || dual_c.value == 'C') && (dual_o.value == 'o' || dual_o.value == 'O') && 
         (dual_r.value == 'r' || dual_r.value == 'R') && (memoria_dual_EE.value == 'e' || memoria_dual_EE.value == 'E')){
         alert(`Palavra dualcore concluida`);
-        dual_core.innerHTML = `<spam style="color: green;"> dual core </spam>`
+        dual_core.innerHTML = `<spam style="color: green;"> Dual Core </spam>`
         q15.innerHTML = `<b style="color: green;"> 15 </b>`}
          
     }
@@ -1002,13 +1073,14 @@
         if((regis_ram_r.value == 'r' || regis_ram_r.value == 'R') && 
         (ram_a.value == 'a' || ram_a.value == 'A') && (ram_m.value == 'm' || ram_m.value == 'M')){
             alert(`Palavra ram concluida`);
-            ram.innerHTML = `<spam style="color: green;"> RAM </spam>`
-            ram2.innerHTML = `<spam style="color: green;"> RAM </spam>`
-            ram3.innerHTML = `<spam style="color: green;"> RAM </spam>`
-            ram4.innerHTML = `<spam style="color: green;"> RAM </spam>`
-            q4.innerHTML = `<b style="color: green;"> 4 </b>`}
-        
+            P_ram.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            P_ram2.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            P_ram3.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            P_ram4.innerHTML = `<spam style="color: green;"> RAM </spam>`
+            q4.innerHTML = `<b style="color: green;"> 4 </b>`
+        }  
     }
+    
 
     function F_flash() {
         if (flash_f.value == 'f' || flash_f.value == 'F') {
@@ -1062,7 +1134,7 @@
          (flash_a.value == 'a' || flash_a.value == 'A') && (regis_flash_s.value == 's' || regis_flash_s.value == 'S') 
          && (flash_h.value == 'h' || flash_h.value == 'H')) {
             alert(`Palavra flash concluida`);
-            flash.innerHTML = `<spam style="color: green;"> flash </spam>`
+            flash.innerHTML = `<spam style="color: green;"> Flash </spam>`
             q7.innerHTML = `<b style="color: green;"> 7 </b>`
          }
 
@@ -1148,12 +1220,12 @@
     
 
           function validar_registradores(){
-         console.log (V_regis_ram_r,V_regis_e,V_regis_g,Vi_I_regis_i5
+         console.log (V_regis_ram_r,V_regis_e,V_regis_g,V_I_regis_i5
          ,V_regis_S,V_regis_t,V_regis_rr,a_dUla,V_regis_D,V_regis_rom_O
          ,V_regis_rrr,V_regis_eprom_E,V_regis_flash_s)
 
          if(( V_regis_ram_r == true) && (V_regis_e == true) && 
-         (V_regis_g == true) &&  (Vi_I_regis_i5 == true) &&  (V_regis_S == true) &&
+         (V_regis_g == true) &&  (V_I_regis_i5 == true) &&  (V_regis_S == true) &&
          ( V_regis_t == true) && (V_regis_rr == true)  && (a_dUla == true ) && 
           (V_regis_D == true) && (V_regis_rom_O == true) &&  (V_regis_rrr == true) &&
          (V_regis_eprom_E == true) && (V_regis_flash_s == true)){
@@ -1191,7 +1263,7 @@
       
             if(( V_Rom_R == true) && (V_regis_rom_O == true) && (V_Rom_M == true)){
             alert(`Palavra Rom concluida`);
-            rom.innerHTML = `<spam style="color: green;"> Rom </spam>`
+            rom.innerHTML = `<spam style="color: green;"> ROM </spam>`
             q5.innerHTML = `<b style="color: green;"> 5 </b>`}
         }
 
@@ -1233,6 +1305,7 @@
                 V_M_eprom_memoria = false
             }
             validar_eprom()
+            validar_memoria_massa()
         }
 
         function validar_eprom() {
@@ -1255,24 +1328,27 @@
              else{
                 V_M_memoria = false
              }
+             validar_memoria_massa()
         }
 
         function E_memoria(){
-            if(momoria_e.value == 'e' || momoria_e == 'E'){
+            if(momoria_e.value == 'e' || momoria_e.value == 'E'){
                 V_E_memoria = true
             }
             else{
                 V_E_memoria = false
             }
+            validar_memoria_massa()
         }
 
         function MM_memoria(){
-            if(momoria_mm.value == 'm' || momoria_mm == 'M'){
+            if(momoria_mm.value == 'm' || momoria_mm.value == 'M'){
                 V_MM_memoria = true
             }
             else{
                 V_MM_memoria = false
             }
+            validar_memoria_massa()
         }
 
         function O_memoria(){
@@ -1282,7 +1358,9 @@
             else{
                 V_O_memoria = false
             }
+            validar_memoria_massa()
         }
+
         function R_memoria(){
             if(memoria_r.value == 'r' || memoria_r.value == 'R'){
                 V_R_memoria = true
@@ -1290,10 +1368,112 @@
             else{
                 V_R_memoria = false
             }
+            validar_memoria_massa()
+        }
+
+        function I_memoria_i7(){
+            if(memoria_i_i7.value == 'i' || memoria_i_i7.value == 'I'){
+                V_I_memoria_i7 = true
+            }
+            else{
+                V_I_memoria_i7 = false
+            }
+            validar_memoria_massa()
+            validar_i7()
+        }
+
+        function A_memoria_adress(){
+            if(memoria_adress_A.value == 'a' || memoria_adress_A.value == 'A'){
+                V_A_memoria_adress = true
+            }
+            else{
+                V_A_memoria_adress = false
+            }
+            validar_memoria_massa()
+        }
+
+        function D_memoria(){
+            if(memoria_d.value == 'd' || memoria_d.value == 'D'){
+                V_D_memoria = true 
+            }
+            else{
+                V_D_memoria = false
+            }
+            validar_memoria_massa()
+        }
+
+        function AA_memoria(){
+            if(memoria_AA.value == 'a' || memoria_AA.value== 'A') {
+                V_AA_memoria = true
+            }
+            else{
+                V_AA_memoria = false
+            }
+            validar_memoria_massa()
+        }
+        function S_memoria(){
+            if(memoria_S.value == 's' || memoria_S.value == 'S'){
+                V_S_memoria = true
+            }
+            else{
+                V_S_memoria = false
+            }
+            validar_memoria_massa()
+        }
+        function SS_memoria_cs(){
+            if(memoria_CS_SS.value == 's' || memoria_CS_SS.value == 'S'){
+                V_SS_memoria_cs = true
+            }
+            else{
+                V_SS_memoria_cs = false
+            }
+            validar_memoria_massa()
+            validar_cs()
+        }
+        function AAA_memoria(){
+            if(memoria_AAA.value == 'a' || memoria_AAA == 'A') {
+                V_AAA_memoria = true
+            }
+            else{
+                V_AAA_memoria = true
+            }
+            validar_memoria_massa()
+        }
+
+       function validar_memoria_massa() {
+           console.log(V_M_memoria,V_E_memoria,V_MM_memoria,
+           V_O_memoria,V_R_memoria,V_I_memoria_i7,V_A_memoria_adress,
+           V_D_memoria,V_EE_memoria_dual,V_M_eprom_memoria,
+           V_AA_memoria,V_S_memoria,V_SS_memoria_cs,V_AAA_memoria)
+            
+           if(( V_M_memoria == true) && (V_E_memoria == true) && 
+           (V_MM_memoria == true) && (V_O_memoria == true) &&
+           (V_R_memoria == true) && (V_I_memoria_i7 == true)
+           && (V_A_memoria_adress == true) && (V_D_memoria == true)
+           && (V_EE_memoria_dual == true) && (V_M_eprom_memoria == true)
+           && (V_AA_memoria == true) && (V_S_memoria == true) &&
+           (V_SS_memoria_cs == true) && (V_AAA_memoria == true)) {
+              alert(`Palavra Memoria de massa concluida`);
+              memoria.innerHTML = `<b style="color: green;"> Memoria de massa </b>`;
+              memoria2.innerHTML = `<b style="color: green;"> Memoria de massa </b>`;
+              memoria3.innerHTML = `<b style="color: green;"> Memoria de massa </b>`;
+              q8.innerHTML = `<b style="color: green;"> 8 </b>`
+            }
+             
+              
+        }
+         
+        function Q_quad(){
+            if(quad_q.value == 'q' || quad_q.value == 'Q'){
+                q_dquad = true
+            }
+            else{
+                q_dquad = false
+            }validar_quad()
         }
 
         function A_quad(){
-            if(quad_a.value == 'a' || quad_a.value == 'A'){
+            if(Quad_A.value == 'a' || Quad_A.value == 'A'){
                 a_dquad = true
             }
             else{
@@ -1310,24 +1490,17 @@
             }validar_quad()
         }
 
-        function Q_quad(){
-            if(quad_q.value == 'q' || quad_q.value == 'Q'){
-                q_dquad = true
-            }
-            else{
-                q_dquad = false
-            }validar_quad()
-        }
-
         function C_quad(){
             if(quad_c.value == 'c' || quad_c.value == 'C'){
                 c_dquad = true
             }
             else{
                 c_dquad = false
-            }validar_quad()
+               
+            }
+         validar_quad()
         }
-
+        
         function O_quad(){
             if(quad_o.value == 'o' || quad_o.value == 'O'){
                 o_dquad = true
@@ -1352,46 +1525,40 @@
             }
             else{
                 e_dquad = false
-            }validar_quad()
+            }
+            validar_quad()
         }
 
         function validar_quad() {
             console.log(q_dquad,V_U_dual_quad,a_dquad,d_dquad, c_dquad,o_dquad,r_dquad,e_dquad)
             if((q_dquad == true) && (V_U_dual_quad == true) && (a_dquad == true) 
             && (c_dquad == true) && (o_dquad == true) && (r_dquad == true) &&
-            (e_dquad == true) ){
+            (e_dquad == true)){
               alert(`Palavra Quad Core concluida`);
               quad.innerHTML = `<b style="color: green;"> Quad Core </b>`;
               quad2.innerHTML = `<b style="color: green;"> Quad Core </b>`;
-              q16.innerHTML = `<b style="color: green;"> 6 </b>`
+              q16.innerHTML = `<b style="color: green;"> 16 </b>`
             }
         }
 
-        function I_memoria_i7(){
-            if(memoria_i_i7.value == 'i' || memoria_i_i7.value == 'I'){
-                i_di7 = true
-            }
-            else{
-                i_di7 = false
-            }validar_i7()
-        }
+       function sete_i7(){
+           if(i7_sete.value = 7){
+            sete_di7 = true
+           }
+           else{
+            sete_di7 = false
+           }
+           validar_i7()
+       }
+       
+        function validar_i7(){
+            console.log(sete_di7,V_I_memoria_i7)
 
-        function sete_i7() {
-            if(i7_sete.value == 7){
-                sete_di7 = true
-            }
-            else{
-                sete_di7 = false
-            }validar_i7()
-        }
-
-        function validar_i7() {
-            console.log(i_di7,sete_di7)
-            if (i_di7 == true && sete_di7 == true) {
-              alert(`Palavra I7 concluida`);
-              i7.innerHTML = `<b style="color: green;"> i7 </b>`;
-              i7dois.innerHTML = `<b style="color: green;"> i7 </b>`;
-              q13.innerHTML = `<b style="color: green;"> 13 </b>`
+            if((V_I_memoria_i7 == true) && (sete_di7)){
+                alert(`Palavra i7 concluida`);
+               i7.innerHTML = `<b style="color: green;"> I7 </b>`;
+               i72.innerHTML = `<b style="color: green;"> I7 </b>`;
+               q13.innerHTML = `<b style="color: green;"> 13 </b>`
             }
         }
 
@@ -1467,9 +1634,258 @@
               q12.innerHTML = `<b style="color: green;"> 12 </b>`
             }
         }
+        
+        function D_adress(){
+            if(adress_d.value == 'd' || adress_d.value == 'D'){
+                V_adress_D = true
+            }
+            else{
+                V_adress_D = false
+            }
+            validar_adressbus()
+        
+        }
+        function R_adress(){
+            if(adress_r.value == 'r' || adress_r.value == 'R'){
+                V_adress_r = true
+            }
+            else{
+                V_adress_r = false
+            }
+            validar_adressbus()
+        }
 
+        function E_adress(){
+            if(adress_e.value == 'e' || adress_e.value == 'E'){
+                V_adress_e = true
+            }
+            else{
+                V_adress_e = false
+            }
+            validar_adressbus()
+        }
+
+        function S_adress(){
+            if(adress_s.value == 's' || adress_s.value == 'S'){
+                V_adress_s = true
+            }
+            else{
+                V_adress_s = false
+            }
+            validar_adressbus()
+        } 
+
+        function SS_adress(){
+            if(adress_ss.value == 's' || adress_ss.value == 'S'){
+                V_adress_ss = true
+            }
+            else{
+                V_adress_ss = false
+            }
+            validar_adressbus()
+        }
+        function B_adress(){
+            if(adress_b.value == 'b' || adress_b.value == 'B'){
+                V_adress_b = true
+            }
+            else{
+                V_adress_b = false
+            }
+            validar_adressbus()
+        }
+        function SSS_adress(){
+            if(adress_sss.value == 's' || adress_sss.value == 'S'){
+                V_adress_sss = true
+            }
+            else{
+                V_adress_sss = false
+            }
+            validar_adressbus()
+        }
+        
+        function validar_adressbus(){
+            console.log(V_A_memoria_adress,V_adress_D,V_adress_r,
+            V_adress_e,V_adress_s,V_adress_ss,V_adress_b,
+            u_dadress_datab, V_adress_sss)
+
+            if((V_A_memoria_adress == true) && (V_adress_D == true) &&
+            (V_adress_r == true) && (V_adress_e == true)
+            && (V_adress_s == true) && (V_adress_ss == true) &&
+            (V_adress_b == true) && ( u_dadress_datab == true) &&
+            (V_adress_sss == true)){
+
+                alert(`Palavra Adress bus concluida`);
+                address_bus.innerHTML = `<b style="color: green;"> Adress Bus </b>`;
+                q11.innerHTML = `<b style="color: green;"> 11 </b>`
+
+            }
+
+        }
+
+        function C_cs(){
+            if(Cs_C.value == 'c' || Cs_C.value == 'C'){
+                V_cs_C = true
+            }
+            else{
+                V_cs_C = false
+            }
+            validar_cs()
+        }
+         
+        function validar_cs(){
+            if(( V_cs_C == true) && (V_SS_memoria_cs == true)){
+                
+                alert(`Palavra CS concluida`);
+                cs.innerHTML = `<b style="color: green;"> CS </b>`;
+                q10.innerHTML = `<b style="color: green;"> 10 </b>`
+            }
+        }
+
+       function D_dma(){
+           if(Dma_D.value == 'd' || Dma_D.value == 'D'){
+             V_Dma_D = true
+           }else{
+             V_Dma_D = false
+           }
+           validar_DMA()
+       }
+       function A_dma(){
+           if(dma_A.value == 'a' || dma_A.value == 'A'){
+            V_Dma_A = true
+           }else{
+            V_Dma_A = false
+           }
+           validar_DMA()
+       }
+       
+       function validar_DMA(){
+           if((V_Dma_D == true) && ( V_Dma_A == true) && (V_MM_memoria = true)){
+                alert(`Palavra DMA concluida`);
+                dma.innerHTML = `<b style="color: green;"> DMA </b>`;
+                q9.innerHTML = `<b style="color: green;"> 9 </b>`
+            }
+        }
+        
+
+        
+        
+
+    
+   
+   function sel_box() {
+        div_frase.innerHTML = ` ${box.value}`;
+    }
 
     function verificar() {
+     if((c_dCpu == true) &&
+     (p_dCpu == true) &&
+     (u_dCpu_ula == true) && 
+     (l_dUla == true) &&
+     ( a_dUla == true) &&
+     (V_I_regis_i5 == true)&&
+     (v_sinco_i5 == true) &&
+     (V_Dual_d === true) &&
+     (V_U_dual_quad == true) &&
+     (V_A_dual == true) &&
+     (V_dual_l == true) &&
+     (V_dual_c == true) &&
+     (V_dual_o == true) &&
+     (V_dual_r == true) &&
+     (V_EE_memoria_dual == true) &&
+     (V_regis_ram_r == true) &&
+     (V_ram_m == true) &&
+     (V_ram_a == true) &&
+     ( V_flash_f == true) &&
+     ( V_flash_l == true) &&
+     ( V_flash_a == true) &&
+     ( V_regis_flash_s == true) &&
+     (V_flash_h == true) &&
+     (V_regis_e == true) &&
+     (V_regis_g == true) &&
+     (V_regis_S == true) &&
+     ( V_regis_t == true) &&
+     ( V_regis_rr == true) &&
+     ( V_regis_D == true) &&
+     (V_regis_rom_O == true) &&
+     (V_regis_rrr == true) &&
+     (V_regis_eprom_E == true) &&
+     (V_Rom_R == true) &&
+     ( V_Rom_M == true) &&
+     ( V_P_eprom == true) &&
+     (V_R_eprom == true) &&
+     (V_O_eprom == true) &&
+     (V_M_eprom_memoria == true) &&
+     (V_M_memoria == true) &&
+     ( V_E_memoria == true) &&
+     (V_MM_memoria == true) &&
+     (V_O_memoria == true) &&
+     (V_R_memoria == true) &&
+     ( V_I_memoria_i7 == true) &&
+     (V_A_memoria_adress == true) &&
+     ( V_D_memoria == true) &&
+     (V_AA_memoria == true) &&
+     (V_S_memoria == true) &&
+     (V_SS_memoria_cs == true) &&
+     (V_AAA_memoria == true) &&
+     ( q_dquad == true) &&
+     (a_dquad == true) &&
+     (d_dquad == true) &&
+     (c_dquad == true) &&
+     (o_dquad == true) &&
+     (r_dquad == true) &&
+     (e_dquad == true) &&
+     (sete_di7 == true) &&
+     (d_ddatab == true) &&
+     (a_ddatab == true) &&
+     (t_ddatab == true) &&
+     (aa_ddatab == true) &&
+     (b_ddatab == true) &&
+     (u_dadress_datab == true) &&
+     (s_ddatab == true) &&
+     (V_adress_D == true) &&
+     (V_adress_r == true) &&
+     (V_adress_e == true) &&
+     (V_adress_s == true) &&
+     (V_adress_ss == true) &&
+     (V_adress_b == true) &&
+     (V_adress_sss == true) &&
+     (V_cs_C == true) &&
+     (V_Dma_D == true) &&
+     (V_Dma_A == true)){
+         completar_jogo.style.display = 'none';
+         tela_de_vitoria.style.display = 'block';
 
+         msg.innerHTML = ` <br> <center> <b style="font-size: 40px; color: green;"> 
+            Parabéns Você venceu o jogo! <b> </center> <br>`;
+
+         msg2.innerHTML =` <br> <center> <b style="font-size: 20px;"> 
+            aperte o botão a baixo se quiser jogar de novo <b> </center> <br>`;
+            }
+         else{
+            completar_jogo.style.display = 'none';
+            tela_de_derrota.style.display = 'block';
+
+            msg3.innerHTML = ` <br> <center> <b style="font-size: 40px; color: red;"> 
+            Poxa não foi dessa vez em amigão :( ! <b> </center> <br>`;
+
+            msg4.innerHTML =` <br> <center> <b style="font-size: 20px;"> 
+            aperte o botão para tentar denovo <b> </center> <br>`;
+            
+        }
+        
+         
     }
+         function voltar(){
+            tela_de_vitoria.style.display = 'none';
+            completar_jogo.style.display = 'block';
+            location.reload(tela_de_vitoria.value);
+         }
+
+         function tentar_de_novo(){
+            tela_de_derrota.style.display = 'none';
+            completar_jogo.style.display = 'block';
+            location.reload(tela_de_vitoria.value);
+        }
+        
+    
 </script>
